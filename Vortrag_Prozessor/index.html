@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+    <!-- Ein Vortrag von Lenny Fuchs -->
+
+    <html>
+        <head>
+            <title>Prozessoren</title>
+
+            <link rel="stylesheet" type="text/css" href="main.css"> 
+            
+            
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+            <link type="image/png" sizes="16x16" rel="icon" href="assets/icons8-processor-office-16.png">
+            <link type="image/png" sizes="32x32" rel="icon" href="assets/icons8-processor-32.png">
+
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            
+            <!-- Javascript Bootstrap einbindung -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+            <style>
+                body{
+                    background-color: #000000;
+                }
+
+                .slideanim {visibility:hidden;}
+                .slide {
+                
+                /* Setzt den Namen der Animation */
+                animation-name: slide;
+                -webkit-animation-name: slide;
+                
+                /* Setzt die Länge der Animation */
+                animation-duration: 1s;
+                -webkit-animation-duration: 1s;
+                
+                
+                visibility: visible;
+                }
+
+                @keyframes slide {
+                0% {
+                    opacity: 0;
+                    transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+                }
+                @-webkit-keyframes slide {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(70%);
+                }
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0%);
+                }
+                }
+                
+            </style>
+
+        </head>
+        <body data-spy="scroll" data-target=".navbar" data-offset="50" onload="welcome_message()">
+
+            <script>
+                //Willkommensnachricht
+                function welcome_message(){
+                    window.alert("Willkommen auf der Webseite von Lenny Fuchs\nBitte nutze die Webseite beim ersten Besuch zum scrollen, um das volle Erlebnis zu genießen.\n--------------------------------------------------------------\n> zuletzt bearbeitet am: 06.11.2022");
+                }
+                
+            </script>
+   
+            <font face="Arial">
+                
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>                        
+                            </button>
+                            <a class="navbar-brand" href="#home">Home</a>
+                        </div>
+                    <div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#allgemein">Allgemein</a></li>
+                                <li><a href="#verarbeitungsprinzipien">Verarbeitungsprinzipien</a></li>
+                                <li><a href="#typen">Typen</a></li>
+                                <li><a href="#aktuelles">Aktuelles</a></li>
+                            </ul>
+                        </div>
+                    </div>    
+                </nav>
+            
+            <div id="home" class="container-fluid">
+            
+                <br><br><center><img src="assets/result3.gif"/></center>
+  
+              </div>
+            
+            
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            
+            <div id="allgemein" class="container-fluid abverhalten slideanim">
+                <br><br><br><center><img src="assets/allgemeines.gif"/></center>
+                
+                <br>
+                <center>
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="25%">
+                            
+                        </td>
+                        <td width="50%">
+                            <font style="color: #FFFFFF; font-size: 14pt">
+                                <div class="slideanim">
+                                    <h2>Was ist ein Prozessor?</h2>
+                                    <p>Allgemein ist ein Prozessor ein freiprogrammierbares Rechenwerk. Er steuert anhand übergebener Befehle 
+                                        andere Schaltungen oder Maschinen und führt so zugleich einen Algorithmus aus. Am Beispiel des Computerprozessors: 
+                                        Der Prozessor oder auch “Herzstück des Computers” ist die zentrale Recheneinheit, welche Aufgaben und Befehle bearbeitet. 
+                                        Seine Aufgaben liegen im Bereich des Rechnen. Dieser Bereich wird immer genutzt, da all seine Aufgaben Rechenoperationen beinhalten. 
+                                        Dem Steuern beispielsweise beim Auslesen der Daten aus dem Arbeitsspeicher und beim erkennen, sowie verarbeiten von Ein und Ausgaben und 
+                                        der Datenübertragung zwischen unterschiedlichen Komponenten des Computers.
+                                    </p>
+                                        <br>
+                                
+                                <div class="slideanim">
+                                    <h2>Wozu benötigt ein Prozessor Kühlung?</h2>
+                                    <p>Durch die hohen Taktraten wird sehr viel thermische Energie frei, welche den Prozessor über einen längeren Zeitraum beschädigen kann. 
+                                        Ein weiterer Grund ist die thermische Drosselung. Bei zu hoher Temperatur “drosselt” sich der Prozessor selbst, um seine Temperatur 
+                                        unter die kritische Grenze zu bringen. Diesen Prozess nennt man auch “thermal throttling”. Sollte diese Maßnahme jedoch nicht ausreichen, 
+                                        schaltet der Prozessor sich selbst ab, um Langzeitschäden zu vermeiden. Aus diesen Gründen versucht man, den Prozessor über verschiedene 
+                                        Möglichkeiten, wie Lüfter oder Wasserkühlung, unter der kritischen Grenze zu halten. Natürlich werden diese Kühlungsmöglichkeiten ständig 
+                                        weiterentwickelt, da die Ansprüche immer höher werden.
+                                    </p>
+                                    <br>
+                                </div>
+
+                                <div class="slideanim">
+                                    <h2>Was ist ein "Mehrkern-Prozessor"?</h2>
+                                    <p>Mehrkern-Prozessoren sind Prozessoren, welche zusammen verschaltet werden, ohne die Taktfrequenz erhöhen zu müssen. Das tut man, da die 
+                                        Leistungsfähigkeit eines jeden Prozessorkerns physisch begrenzt ist. In der Industrie unterscheidet man zwischen Einkernprozessoren (Single-Core), 
+                                        Doppelkernprozessoren (Dual-Core), Vierkernprozessoren (Quad-Core), Sechskernprozessoren (Hexa-Core) und Achtkernprozessoren (Octa-Core).
+                                    </p>
+                                    <br>
+                                </div>
+
+                                <div class="slideanim">
+                                    <h2>Was ist die CPU-Leistungsaufnahme?</h2>
+                                    <p>
+                                        Die CPU-Leistungsaufnahme ist die elektrische Leistung, welche ein Prozessor aufnimmt und dann in Wärme umwandelt. Unterschiedliche Prozessoren Typen 
+                                        können einen unterschiedlichen Energieverbrauch trotz gleicher Taktfrequenz aufweisen und je nach Anwendung und Kostenintensität fällt die Leistungsaufnahme 
+                                        unterschiedlich ins Gewicht der Designentscheidungen.
+                                    </p>
+                                    <br>
+                                </div>
+                                
+                                <div class="slideanim">
+                                    <h2>Was ist die Taktfrequenz eines Prozessors?</h2>
+                                    <p>
+                                        Man kann allgemein sagen, umso höher die Taktfrequenz, umso schneller arbeitet der Prozessor. Sie gibt die Anzahl der Zyklen (Verarbeitung von Anweisungen pro Sekunde), 
+                                        die von dem Prozessor pro Sekunde verarbeitet werden und wird mit der Einheit GHz (Gigahertz) bezeichnet. Beispielsweise wäre eine Taktfrequenz von 3,2 GHz die Angabe für 3,2 Milliarden Takte (Zyklen), 
+                                        welche pro Sekunde vom Prozessor ausgeführt werden. Alte Prozessoren werden mit der Angabe MHz bezeichnet. Die Schnelligkeit des Prozessors ist aber auch stark abhängig davon, wie der Prozessor eine Aufgabe behandelt, 
+                                        da er zum Beispiel die Aufgabe auf mehrere Kerne (im Falle eines Mehrkern-Prozessors) verteilen kann oder einen größeren Cache (Schnellzugriffzwischenspeicher zur Entlastung des RAM’s), welcher dem Prozessor eine 
+                                        schnelle Auslagerung von Daten ermöglicht. Die Taktfrequenz kann über das BIOS eingestellt werden, um eine Übertaktung des Prozessors zu ermöglichen.
+                                    </p>
+                                    <br>
+                                </div>
+                                
+                                <br><br>
+                            </font>
+                            
+                        </td>
+                        <td width="25%">
+                            
+                        </td>
+                    </tr>
+                </table>
+                </center>
+            </div>
+            <br><br>
+            <div style="background-color: #F4f4f4" id="verarbeitungsprinzipien" class="container-fluid slideanim">
+                <br><br><br><center><img src="assets/verarbeitungsprinzipien.gif"/></center>
+                
+                <div class= "container-fluid slideanim">
+                <br>
+                <center>
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="25%">
+                            
+                        </td>
+                        <td width="50%">
+                            <font style="color: #000000; font-size: 14pt">
+                                <div class="slideanim">
+                                    <h2>Was ist Pipelining?</h2>
+                                    <p>
+                                        Das Prozessor Pipelining, kann man sich vorstellen, wie das Arbeiten am Fließband. Die Befehlsabarbeitung 
+                                        erfolgt hintereinander in mehreren Schritten. Sobald ein Befehl bearbeitet wurde, wird der nächste 
+                                        “nachgeschoben” und so wird die Pipe immer länger. Bei dieser Art der Befehlsabarbeitung kann es zu sehr 
+                                        langen Wartezeiten kommen, welche aber durch bestimmte Maßnahmen verkürzt werden können. Im äußersten Optimalfall 
+                                        dauert die Bearbeitung einer Phase 1 Taktzyklus. Diese Art der Befehlsabarbeitung kommt sehr oft in CISC-basierten 
+                                        Prozessoren vor. Hier kann die Dauer einer Phase aber variieren, da die Befehle im CISC Konzept sehr komplex 
+                                        sind und es so meist zu einer längeren Arbeitszeit als einem Taktzyklus kommt. Ein Beispiel für eine 5-Phasen-Pipeline 
+                                        wäre zum Beispiel:
+                                        <ul>
+                                            <li>Schritt 1 -> Fetch: laden des Befehls</li>
+                                            <li>Schritt 2 -> Decode: dekodieren des Befehls</li>
+                                            <li>Schritt 3 -> Load: laden der Operanden</li>
+                                            <li>Schritt 4 -> Execute: ausführen der Befehle</li>
+                                            <li>Schritt 5 -> Write: schreiben des Ergebnisses</li>
+                                        </ul>
+                                    </p>
+                                    <br>
+                         
+                                </div>
+                                
+                            </font>
+                        </td>
+                        <td width="25%">
+                            
+                        </td>
+                    </tr>
+                </table>
+                </center>
+                </div>
+                <div class= "container-fluid slideanim">
+                    <center>
+                        <table width="100%" border="0">
+                            <tr>
+                                <td width="25%">
+                                    
+                                </td>
+                                <td width="50%">
+                                    <font style="color: #000000; font-size: 14pt">
+                                        <div class="slideanim">
+                                            <h2>Was ist Parallelisierung?</h2>
+                                                    
+                                                    <p>
+                                                        Die Parallelisierung ist eine entwickelte Technik den Prozessor, nicht nur durch die Erhöhung der Taktrate, 
+                                                        zu beschleunigen. Durch eine stark durchdachte Strukturierung des Prozessors, ist es möglich, im Programmcode 
+                                                        weiter zu machen, während außenstehende Daten geladen werden und ermöglicht so einen Arbeitsrhythmus, 
+                                                        welcher nicht von Verzögerungen behindert wird. Dies ermöglicht den Prozessoren, ihre anstehenden Aufgaben auf 
+                                                        parallel arbeitende Einheiten zu verteilen. Ebenen der Parallelität sind:
+                                                    </p>
+                                                            <ul>
+                                                                <li>Pipelining</li>
+                                                                <li>Multi-Threading</li>
+                                                                <li>Coprozessor</li>
+                                                                <li>Multiprozessor</li>
+                                                                <li>Multi-Core-Prozessor</li>
+                                                                <li>Multi-Computer</li>
+                                                                <li>Grid / Cloud Computing</li>
+                                                            </ul>
+                                                        
+                                                    
+                                                    <br><br>
+                                        </div>
+                            </font>
+                            
+                        </td>
+                        <td width="25%">
+                            
+                        </td>
+                    </tr>
+                </table>
+                </center>
+
+                </div>
+                <br><br><br>
+            </div>
+            <div style="background-color: #2d2d30" id="typen" class="container-fluid slideanim">
+                <br><br><br><center><img src="assets/typen.gif"/></center>
+                
+                <font style="color: #FFFFFF; font-size: 14pt">
+                    <br>
+                    <center>
+                    <table width="100%" border="0">
+                        <tr>
+                            <td width="25%">
+                                
+                            </td>
+                            <td width="50%">
+                                <div class="slideanim">
+                                    <h2>Welche Porzessor Konzepte / Typen gibt es?</h2>
+                                    <p>
+                                        Es gibt 2 verschiedene Prozessoren Konzepte: RISC und CISC. RISC bedeutet ausgesprochen: 
+                                        “Reduced Instruction Set Computing” und CISC: "Complex Instruction Set Computing”. Heutzutage 
+                                        ist die Unterscheidung zwischen CISC und RISC nur noch durch analysieren des Prozessor inneren 
+                                        möglich und von außen nicht sichtbar.
+                                    </p>
+                                    <br>
+                                </div>
+
+                                <div class="slideanim">
+                                    <h3>RISC</h3>
+                                    <p>
+                                        RISC findet man meist in ARM-Architektur basierten Prozessoren, welche heutzutage meist in Smartphones 
+                                        und Tablets verbaut werden. RISC besitzt, wie der Name schon preisgibt, einen reduzierten Befehlssatz. 
+                                        Es ist viel schneller als CISC, da die Befehle nicht in kleinere Mikrocodes dekodiert werden müssen und 
+                                        die meisten Befehle können schon innerhalb weniger Taktzyklen ausgeführt werden. Für die Industrie ist 
+                                        dieses Konzept so attraktiv, da es einfacher und billiger herzustellen ist als CISC. Praktisch gesehen 
+                                        weißt heutzutage fast jeder Prozessor RISC Elemente in sich auf.
+                                    </p>
+                                    <br>
+                                </div>
+                                
+                                <div class="slideanim">
+                                    <h3>CISC</h3>
+                                    <p>
+                                        CISC besitzt gegenüber dem RISC-Konzept einen sehr umfangreichen Befehlssatz. Sie werden als relativ langsam 
+                                        angesehen, da sie meist 4-10 Takte zum Ausführen eines Befehls brauchen. Auch müssen die Befehle im CISC-Konzept 
+                                        erst in kleinere Mikrocodes umgewandelt werden um sie zu bearbeiten, was die längere Bearbeitungszeit zur Folge hat. 
+                                        Intel und AMD Prozessoren sind Vertreter, welche als typische CISC Prozessoren verstanden werden, 
+                                        obwohl diese Intern auch RISC Elemente aufweisen. 
+                                    </p>
+                                    <br><br><br><br>
+                                </div>
+                            </td>
+                            <td width="25%">
+                            
+                            </td>
+                        </tr>
+                    </table>
+                    </center>
+                            
+                </font>
+                
+            </div>
+            <div id="aktuelles" class="carousel slide " data-ride="carousel">
+
+                <br><br><br><center><img src="assets/aktuelles_beispiel.gif"/></center>
+
+                <ol class="carousel-indicators">
+                    <li data-target="#aktuelles" data-slide-to="0" class="active"></li>
+                    <li data-target="#aktuelles" data-slide-to="1"></li>
+                    <li data-target="#aktuelles" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner slideanim" role="listbox">
+                    <div class="item active slideanim">
+                        <center><a href="https://youtu.be/rQj4PJvPFeU" alt="AMD Threadripper Produktvideo"><img src="assets/amd_threadripper.jpg"></a></center>
+                        <div class="carousel-caption">
+                            <h3>AMD Threadripper PRO 5000 WX-Series</h3>
+                            <p>AMD führender Prozessor im Bereich Server</p>
+                        </div>
+                    </div>
+
+                    <div class="item slideanim">
+                        <center><a href="https://youtu.be/WcH_7xsYtUk" alt="AMD Ryzen Produktvideo"><img src="assets/amd_ryzen.jpg"></a></center>
+                        <div class="carousel-caption">
+                          <h3>AMD Ryzen 7000-Serie</h3>
+                          <p>AMD's hochentwickelte Desktop Prozessoren-Reihe</p>
+                        </div>
+                      </div>
+                  
+                      <div class="item slideanim">
+                        <center><a href="https://youtu.be/THhrq58cxgI" alt="Intel Core i9 Produktvideo"><img src="assets/intel_core_i9.jpg"></a></center>
+                        <div class="carousel-caption">
+                          <h3>Intels Core i9 Reihe</h3>
+                          <p>Intels neueste Prozessoren Generation</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                <a class="left carousel-control" href="#aktuelles" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Zurück</span>
+                </a>
+                <a class="right carousel-control" href="#aktuelles" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Weiter</span>
+                </a>
+                
+            </div>
+            <br><br><br><br>
+
+
+            <footer class="container-fluid text-center" style="background-color: #CBF83E">
+                <br>
+                <a href="#home" title="Zum Anfang">
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                </a>
+                <p>Eine Webseite von Lenny Fuchs</p>
+              </footer>
+            </font>
+
+
+        <script>
+            $(document).ready(function(){
+            //sanftes scrollen mit einblenden
+            $(".navbar a, footer a[href='#home']").on('click', function(event) {
+                
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    //JQuery Funktion für sanftes scrollen und 900 setzt die Geschwindigkeit um einen bestimmten Bereich zu erreichen
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+                
+                        window.location.hash = hash;
+                    });
+                }
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function(){
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                    $(this).addClass("slide");
+                    }
+                });
+                });
+            })</script>
+            
+        </body>
+</html>

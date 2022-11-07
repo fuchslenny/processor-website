@@ -1,0 +1,30 @@
+h1{
+    font-size: 72pt;
+    color: #CBF83E;
+    font-weight: 900;   
+}
+
+body{
+    
+    background: url("assets/bg_prozessor_test.jpg"), #000000;
+    background-repeat: no-repeat;
+    
+
+}
+
+
+.navbar {
+    font-family: Montserrat, sans-serif;
+    background-color: #2d2d30;
+    font-weight: bold;
+    
+}
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.glyphicon-chevron-up{
+    color: #000000;
+}
